@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-error-container: #93000a;
+  --color-on-tertiary-fixed: #1a1c1c;
+  --color-on-surface-variant: #464835;
+  --color-secondary-fixed: #e5e2e1;
+  --color-tertiary-fixed-dim: #c6c6c7;
+  --color-tertiary: #5d5f5f;
+  --color-on-background: #1b1c1c;
+  --color-surface-container-low: #f5f3f3;
+  --color-on-primary-container: #616d00;
+  --color-on-secondary-container: #656464;
+  --color-tertiary-container: #e6e6e6;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-surface-container: #efeded;
+  --color-outline-variant: #c7c8ae;
+  --color-surface-variant: #e3e2e2;
+  --color-background: #faf9f9;
+  --color-on-primary-fixed: #1a1e00;
+  --color-on-tertiary-container: #656767;
+  --color-on-secondary-fixed-variant: #474646;
+  --color-surface-dim: #dbdad9;
+  --color-watermark-gray: rgba(136,136,136,0.15);
+  --color-pure-white: #FFFFFF;
+  --color-error-container: #ffdad6;
+  --color-outline: #777962;
+  --color-surface-container-highest: #e3e2e2;
+  --color-on-tertiary: #ffffff;
+  --color-inverse-primary: #bdd124;
+  --color-tertiary-fixed: #e2e2e2;
+  --color-on-tertiary-fixed-variant: #454747;
+  --color-error: #ba1a1a;
+  --color-inverse-surface: #303031;
+  --color-on-surface: #1b1c1c;
+  --color-surface-container-lowest: #ffffff;
+  --color-scrim-overlay: rgba(0,0,0,0.4);
+  --color-primary-fixed: #d9ee43;
+  --color-on-secondary: #ffffff;
+  --color-on-error: #ffffff;
+  --color-on-primary-fixed-variant: #434b00;
+  --color-surface: #faf9f9;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed-dim: #bdd124;
+  --color-primary-container: #ddf247;
+  --color-surface-tint: #596400;
+  --color-secondary: #5f5e5e;
+  --color-surface-container-high: #e9e8e8;
+  --color-secondary-container: #e5e2e1;
+  --color-surface-bright: #faf9f9;
+  --color-primary: #596400;
+  --color-inverse-on-surface: #f2f0f0;
+  --color-secondary-fixed-dim: #c8c6c5;
+
+  --spacing-stack-gap-md: 1.5rem;
+  --spacing-stack-gap-lg: 3rem;
+  --spacing-stack-gap-sm: 0.5rem;
+  --spacing-container-max: 1440px;
+  --spacing-margin-desktop: 3rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-section-padding-y: 6rem;
+}
+
+@utility text-h2-subheading {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+@utility text-hero-title {
+  font-family: "Inter", sans-serif;
+  font-size: 72px;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+@utility text-label-caps {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+@utility text-display-watermark {
+  font-family: "Inter", sans-serif;
+  font-size: 180px;
+  line-height: 160px;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+}
+@utility text-hero-title-mobile {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+@utility text-body-lg {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+@utility text-h1-section {
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+@utility text-button-text {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.0;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+@utility text-body-md {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Custom styles from Stitch spec */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px #888888;
+  color: transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+.animate-scroll-left:hover, .animate-scroll-right:hover {
+  animation-play-state: paused;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
